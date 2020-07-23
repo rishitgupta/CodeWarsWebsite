@@ -1,0 +1,41 @@
+:root {
+    --blackish: #010101;
+    --whiteish: #FEFEFE;
+    --bellota: 'Bellota Text', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--roboto);
+    background-color: var(--whiteish);
+    color: var(--blackish);
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    /*border-bottom: 0.5px solid #B7CCBE;*/
+}
+
+nav a {
+    padding: 3.5vh 7.5vw;
+    border-top: 1.5px solid var(--whiteish);
+    border-bottom: 1.5px solid var(--whiteish);
+    margin: 0;
+    font-family: var(--bellota);
+    font-weight: 700;
+    color: var(--blackish);
+    font-size: 1.5rem;
+    transition: border-color 0.75s ease;
+}
+
+nav a:hover {
+    border-color: var(--blackish);
+}
