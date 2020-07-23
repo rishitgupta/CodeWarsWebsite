@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <title>Tracking | SixFeetApart</title>
+</head>
+<body>
+    <nav>
+        <a href="">Info</a>
+        <a href="">Testing</a>
+        <a href="">Tracking</a>
+        <a href="">Treatment</a>
+    </nav>
+    <div class="main">
+        <h1></h1>
+        <div id="tracking-content">
+            <div class="info-container">
+                <h3 class="data-heading">Confirmed</h3>
+                <span id="confirmed-daily"></span>
+                <h5 id="confirmed-total"></h5>
+            </div>
+            <div class="info-container">
+                <h3 class="data-heading">Active</h3>
+                <span id="active-daily"></span>
+                <h5 id="active-total"></h5>
+            </div>
+            <div class="info-container">
+                <h3 class="data-heading">Recovered</h3>
+                <span id="recovered-daily"></span>
+                <h5 id="recovered-total"></h5>
+            </div>
+            <div class="info-container">
+                <h3 class="data-heading">Deceased</h3>
+                <span id="deceased-daily"></span>
+                <h5 id="deceased-total"></h5>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $.getJSON("https://api.covid19india.org/data.json", function(data) {
+            var info = data["cases_time_series"][data["cases_time_series"].length-1];
+            console.log(info);
+            $('#confirmed-daily').html(info['dailyconfirmed']);
+            $('#active-daily').html(info['dailyconfirmed']-info['dailyrecovered']-info['dailydeceased']);
+            $('#recovered-daily').html(info['dailyrecovered']);
+            $('#deceased-daily').html(info['dailydeceased']);
+            $('#confirmed-total').html(info['totalconfirmed']);
+            $('#active-total').html(info['totalconfirmed']-info['totalrecovered']-info['totaldeceased']);
+            $('#recovered-total').html(info['totalrecovered']);
+            $('#deceased-total').html(info['totaldeceased']);
+        });
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script>
+    var options = {
+        strings: ['Tracking'],
+        typeSpeed: 80,
+        showCursor: false
+    };
+    var Tracking = new Typed('h1', options);
+</script>
+</body>
+</html>

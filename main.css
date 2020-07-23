@@ -3,6 +3,7 @@
     --whiteish: #FEFEFE;
     --bellota: 'Bellota Text', sans-serif;
     --roboto: 'Roboto', sans-serif;
+    --green: #00501B;
 }
 
 body {
@@ -21,21 +22,60 @@ nav {
     width: 100%;
     justify-content: flex-end;
     align-items: center;
-    /*border-bottom: 0.5px solid #B7CCBE;*/
+    border: 0;
+    border-bottom: 1px solid rgba(198, 198, 198, 1);
 }
 
 nav a {
     padding: 3.5vh 7.5vw;
-    border-top: 1.5px solid var(--whiteish);
-    border-bottom: 1.5px solid var(--whiteish);
     margin: 0;
     font-family: var(--bellota);
     font-weight: 700;
-    color: var(--blackish);
     font-size: 1.5rem;
+    color: var(--green);
+    border-top: 1.5px solid var(--whiteish);
+    border-bottom: 1.5px solid var(--whiteish);
     transition: border-color 0.75s ease;
 }
 
 nav a:hover {
-    border-color: var(--blackish);
+    border-color: var(--green);
+}
+
+#landing {
+    display: block;
+    height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--bellota);
+    font-weight: 700;
+    color: var(--green);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+/* <----------TRACKING.HTML----------> */
+.main {
+    display: block;
+    margin: 5vh 20vw 0 20vw;
+}
+
+.info-container {
+    padding: 2.5rem;
+    border-radius: 3px;
+    margin: 1rem 1rem;
+    width: 35%;
+    text-align: center;
+    background-color: rgba(249, 249, 249, 0.1);
+    box-shadow: 2px 2px 5px 0.5px rgba(232, 232, 232, 1);
+}
+
+#tracking-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
