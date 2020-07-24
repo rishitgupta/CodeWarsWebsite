@@ -33,6 +33,24 @@ a {
     font-size: smaller;
 }
 
+.underline {
+    text-decoration: underline;
+}
+
+/* Scroll bar */
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #DEDEDE;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: inherit;
+}
+
 #landing h1 {
     position: absolute;
     left: 50%;
@@ -354,8 +372,13 @@ label {
 #gallery {
     display: flex;
     justify-content: space-evenly;
-    align-items: flex-start;
+    align-items: baseline;
     flex-wrap: wrap;
+}
+
+#gallery iframe {
+    width: 57.5vw;
+    height: 40vh;
 }
 
 @media screen and (max-width: 768px) {
@@ -369,7 +392,5 @@ label {
     }
 
     #gallery iframe {
-        width: 230;
-        height: 207.5;
     }
 }   
