@@ -274,7 +274,7 @@ form {
     display: flex;
     flex-direction: column;
     font-family: var(--roboto);
-    margin-bottom: 30vh ;
+    margin-bottom: 10vh;
 }
 
 label {
@@ -449,4 +449,20 @@ label {
     #brain-svg, #mindpos-svg, #meditate-svg, #stimulating-svg {
         height: 30vh;
     }
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(198, 198, 198, 1);
+    height: 15vh;
+}
+
+footer p {
+    color: var(--green);
+    font-family: var(--bellota);
+    font-weight: 700;
+    font-size: 1.05rem;
 }
