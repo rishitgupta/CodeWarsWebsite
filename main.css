@@ -381,6 +381,10 @@ label {
     height: 40vh;
 }
 
+.gallery-pair {
+    margin-bottom: 5vh;
+}
+
 @media screen and (max-width: 768px) {
     .testing-procedures div {
         flex-direction: column;
@@ -389,8 +393,5 @@ label {
     #testing-image {
         height: 30vh !important;
         width: auto !important;
-    }
-
-    #gallery iframe {
     }
 }   
