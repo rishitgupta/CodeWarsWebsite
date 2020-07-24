@@ -9,10 +9,13 @@
 </head>
 <body>
     <nav>
-        <a href="">Info</a>
-        <a href="">Testing</a>
-        <a href="">Tracking</a>
-        <a href="">Treatment</a>
+        <a href="main.html">Home</a>
+        <a href="info.html">Info</a>
+        <a href="testing.html">Testing</a>
+        <a href="tracking.html">Tracking</a>
+        <a href="treatment.html">Treatment</a>
+        <a href="positivity.html">Positivity</a>
+        <a href="gallery.html">Gallery</a>
     </nav>
     <div class="main">
         <h1></h1>
@@ -45,10 +48,10 @@
         $.getJSON("https://api.covid19india.org/data.json", function(data) {
             var info = data["cases_time_series"][data["cases_time_series"].length-1];
             console.log(info);
-            $('#confirmed-daily').html(info['dailyconfirmed']);
-            $('#active-daily').html(info['dailyconfirmed']-info['dailyrecovered']-info['dailydeceased']);
-            $('#recovered-daily').html(info['dailyrecovered']);
-            $('#deceased-daily').html(info['dailydeceased']);
+            $('#confirmed-daily').html("+" + info['dailyconfirmed']);
+            $('#active-daily').html("+" + (info['dailyconfirmed']-info['dailyrecovered']-info['dailydeceased']));
+            $('#recovered-daily').html("+" + info['dailyrecovered']);
+            $('#deceased-daily').html("+" + info['dailydeceased']);
             $('#confirmed-total').html(info['totalconfirmed']);
             $('#active-total').html(info['totalconfirmed']-info['totalrecovered']-info['totaldeceased']);
             $('#recovered-total').html(info['totalrecovered']);

@@ -9,13 +9,44 @@
 </head>
 <body>
     <nav>
-        <a href="">Info</a>
-        <a href="">Testing</a>
-        <a href="">Tracking</a>
-        <a href="">Treatment</a>
+        <a href="main.html">Home</a>
+        <a href="info.html">Info</a>
+        <a href="testing.html">Testing</a>
+        <a href="tracking.html">Tracking</a>
+        <a href="treatment.html">Treatment</a>
+        <a href="positivity.html">Positivity</a>
+        <a href="gallery.html">Gallery</a>
     </nav>
-    <div id="landing"></div>
-    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>-->
+    <div id="landing">
+        <div id="particles-js"></div>
+        <img src="res/Six feet.png" alt="SIX FEET APART" id="logo">
+        <h1></h1>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            // Changed landing height to body height
+            //var landingHeight = $('body').css('height') - $('nav').css('height')
+            //$('#landing').css('height', landingHeight);
+        })
+    </script>
+
+    <script src="particles.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var options = {
+            strings: ['SIX FEET APART'],
+            typeSpeed: 80,
+            showCursor: false
+        };
+        var Tracking = new Typed('h1', options);
+    </script>
 </body>
 </html>
