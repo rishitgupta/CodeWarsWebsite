@@ -310,4 +310,17 @@ label {
         height: 35vh;
         width: auto;
     }
+
+    #symptoms-list {
+        display: flex !important; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+#symptoms-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
