@@ -215,6 +215,8 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
+    font-family: var(--roboto);
+    margin-bottom: 30vh ;
 }
 
 label {
@@ -247,8 +249,9 @@ label {
     border: 1px solid #DADADA;
     outline: 0;
     border-radius: 0.25rem;
-    font-size: 1.5rem;
-    letter-spacing: 0;  
+    font-size: 1.25rem;
+    letter-spacing: 0;
+    font-family: var(--roboto);
     transition: all 0.2s ease-in-out;
 }
 
@@ -256,6 +259,27 @@ label {
     border: 1px solid #80BDFF;
     box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
     outline: 0;
+}
+
+.long-input {
+    width: 100%;
+}
+
+#submit-button {
+    display: block;
+    padding: 0.35rem;
+    border: 1px solid #DADADA;
+    border-radius: 0.25rem;
+    margin: 2vh 3.5vw;
+    font-size: 1rem;
+    font-family: 'Roboto';
+}
+
+.submit-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 768px) {
