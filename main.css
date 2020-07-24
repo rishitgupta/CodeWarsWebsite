@@ -421,6 +421,21 @@ label {
     margin-bottom: 5vh;
 }
 
+#tips, #tips ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#tips-heading {
+    margin-bottom: 0 !important;
+}
+
+#brain-svg, #mindpos-svg, #meditate-svg, #stimulating-svg {
+    height: 45vh;
+}
+
 @media screen and (max-width: 768px) {
     .testing-procedures div {
         flex-direction: column;
@@ -430,4 +445,8 @@ label {
         height: 30vh !important;
         width: auto !important;
     }
-}   
+
+    #brain-svg, #mindpos-svg, #meditate-svg, #stimulating-svg {
+        height: 30vh;
+    }
+}
