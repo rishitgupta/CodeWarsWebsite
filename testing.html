@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="res/Six feet.png">
+    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <title>Testing | SixFeetApart</title>
+</head>
+<body>
+    <nav>
+        <a href="main.html">Home</a>
+        <a href="info.html">Info</a>
+        <a href="testing.html">Testing</a>
+        <a href="tracking.html">Tracking</a>
+        <a href="treatment.html">Treatment</a>
+        <a href="positivity.html">Positivity</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+
+    <div class="main">
+        <h1></h1>
+        <div id="map"></div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly" defer></script>
+    <script>
+        var map;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: -34.397,
+                    lng: 150.644
+                },
+                zoom: 8
+            });
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var options = {
+            strings: ['Testing'],
+            typeSpeed: 80,
+            showCursor: false
+        };
+        var Tracking = new Typed('h1', options);
+    </script>
+</body>
+</html>

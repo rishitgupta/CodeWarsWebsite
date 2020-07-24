@@ -27,19 +27,92 @@ nav {
 }
 
 nav a {
-    padding: 1em 4.5vw;
+    padding: 1em 3.5vw;
     margin: 0;
     font-family: var(--bellota);
     font-weight: 700;
-    font-size: 1.5em;
+    font-size: 1.5vw;
     color: var(--green);
     border-top: 1.5px solid var(--whiteish);
     border-bottom: 1.5px solid var(--whiteish);
     transition: border-color 0.75s ease;
 }
 
+p {
+    font-size: 3.5vh;
+}
+
 nav a:hover {
     border-color: var(--green);
+}
+
+#nav-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /*background-color: white;*/
+    z-index: 2;
+}
+
+#toggle-button {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    p {
+        font-size: 2.5vh;
+    }
+
+    nav, #nav-wrapper {
+        flex-direction: column;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .body-toggled {
+        height: 100%;
+        overflow-y: hidden;
+    }
+
+    .nav-toggled {
+        display: flex;
+        border: 0;
+        margin-top: 5vh;
+    }
+
+    .navbar-toggled {
+        display: flex;
+        height: 100vh;
+        background-color: var(--whiteish);
+        z-index: 2;
+    }
+
+    .link-toggled {
+        text-align: center;
+        padding: 1vh 10vw;
+        margin: 1.5vh 0vw;
+        font-size: 6.5vw;
+        width: 35vw;
+    }
+
+    .toggle-button-toggled {
+        position: absolute;
+        padding: 0 !important;
+        margin: 0 !important;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    #toggle-button {
+        display: initial;
+        align-self: flex-end;
+        margin: 10px 20px;
+        cursor: pointer;
+    }
 }
 
 #landing {
@@ -66,20 +139,20 @@ nav a:hover {
     left: 50%;
     top: 60%;
     transform: translate(-50%, 0);
-    font-size: ;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--bellota);
     font-weight: 700;
     color: var(--green);
+    text-align: center;
 }
 
 h1 {
+    display: inline-block;
     font-size: 3rem;
 }
 
-/* <----------TRACKING.HTML----------> */
 .main {
     display: block;
     margin: 5vh 20vw 0 20vw;
@@ -118,4 +191,12 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+#tracking-heading {
+    margin-bottom: 5px;
+}
+
+#map {
+    height: 75vh;
 }
