@@ -2,5 +2,5 @@
 
 Please open main.html after extracting the .zip file.
 
-Mohak Chandna, XI-J
+Mohak Chandna, XI-G
 Rishit Gupta, XII-J

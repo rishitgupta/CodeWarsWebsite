@@ -28,6 +28,8 @@
         <div id="particles-js"></div>
         <img src="res/Six feet.png" alt="SIX FEET APART" id="logo">
         <h1></h1>
+        <p></p>
+        <p id="secondp"></p>
     </div>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -35,8 +37,6 @@
 
     <script src="particles.js"></script>
     <script>
-        $('#particles-js')
-
         particlesJS.load('particles-js', 'particlesjs-config.json', function() {
             console.log('callback - particles.js config loaded');
         });
@@ -44,12 +44,17 @@
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script>
-        var options = {
-            strings: ['SIX FEET APART'],
-            typeSpeed: 80,
-            showCursor: false
+        var options = function(nombre, stringupingu) {
+            var settings = {
+                strings: [stringupingu],
+                typeSpeed: nombre,
+                showCursor: false
+            };
+            return settings;
         };
-        var Tracking = new Typed('h1', options);
+        var firstTracking = new Typed('h1', options(80, 'SIX FEET APART'));
+        var secondTracking = new Typed('p', options(20, 'Adapting to lifestyle changes, managing the fear of contracting the virus and worrying about people close to us, are challenging for all of us. With SixFeetApart we strive to bring the community a lot closer and face this challenge in the best possible way.'));
+        var thirdTracking = new Typed('#secondp', options(120, '<i>\"Tough times never last, tough people do.\"<i>'));
     </script>
 </body>
 </html>

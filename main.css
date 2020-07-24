@@ -58,7 +58,24 @@ a {
     transform: translate(-50%, 0);
 }
 
-h1, h2, h3, h4, h5, h6 {
+#landing p {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, 0);
+    font-size: 1rem;
+    padding-top: 10px;
+}
+
+#landing #secondp {
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%, 0);
+    font-size: 1.15rem;
+}
+
+h1, h2, h3, h4, h5, h6, #landing p {
     font-family: var(--bellota);
     font-weight: 700;
     color: var(--green);
@@ -115,6 +132,11 @@ nav a:hover {
 @media screen and (max-width: 768px) {
     #landing h1 {
         font-size: 2rem;
+    }
+
+    #landing p {
+        font-size: 0.5rem;
+        padding-top: 5vh;
     }
 
     p, ul {
@@ -190,7 +212,7 @@ nav a:hover {
     left: 50%;
     top: 40%;
     transform: translate(-50%, -50%);
-    height: 35vh;
+    height: 40vh;
 }
 
 /* Coronavirus stats */
@@ -231,6 +253,20 @@ nav a:hover {
 
 #tracking-heading {
     margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .info-container .data-heading {
+        font-size: 1rem;
+    }
+
+    .info-container span {
+        font-size: smaller;
+    }
+
+    .info-container h5 {
+        font-size: 1.25rem;
+    }
 }
 
 /* Form */
