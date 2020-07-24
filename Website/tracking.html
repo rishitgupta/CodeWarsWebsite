@@ -51,6 +51,7 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
     <script>
         $.getJSON("https://api.covid19india.org/data.json", function(data) {
             var info = data["cases_time_series"][data["cases_time_series"].length-1];

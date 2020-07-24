@@ -60,21 +60,8 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script>
-        // Script for the menu button in smaller-screen devices
-        var toggleNav = function() {
-            // Gives some of the elements a "toggled" class
-            $('nav').toggleClass("nav-toggled");
-            $('#nav-wrapper').toggleClass("navbar-toggled");
-            $('nav a').each(function() {$(this).toggleClass("link-toggled");});
-            $('#toggle-button').toggleClass("toggle-button-toggled");
-            $('body').toggleClass("body-toggled");
-
-            // Closes menu if toggled link opens
-            $('.link-toggled').click(toggleNav);
-        }
-        $('#toggle-button').click(toggleNav);
-    </script>
+    <script src="script.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script>
         var options = {
