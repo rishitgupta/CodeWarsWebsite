@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="res/Six feet.png">
     <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="main.css">
-    <title>SixFeetApart</title>
+    <title>Treatment | SixFeetApart</title>
 </head>
 <body>
     <div id="nav-wrapper">
@@ -24,32 +24,51 @@
         </div>
     </div>
     
-    <div id="landing">
-        <div id="particles-js"></div>
-        <img src="res/Six feet.png" alt="SIX FEET APART" id="logo">
+    <div class="main">
         <h1></h1>
+        <div id="form-wrapper">
+            <form action="get">
+                <div class="form-row">
+                    <span class="form-pair">
+                        <label for="first-name">First Name</label>
+                        <input type="text" class="text-input" id="first-name">
+                    </span>
+                    <span class="form-pair">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" class="text-input" id="last-name">
+                    </span>
+                </div>
+                <div class="form-row">
+                    <span class="form-pair">
+                        <label for="email-address">Email Address</label>
+                        <input type="email" class="text-input long-input" id="email-address">
+                    </span>
+                </div>
+                <div class="form-row">
+                    <span class="form-pair">
+                        <label for="phone-number">Phone no.</label>
+                        <input type="tel" class="text-input long-input" pattern="[0-9]{10}" id="phone-number">
+                    </span>
+                </div>
+            </form>
+        </div>
     </div>
-    
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
-            // Changed landing height to body height
-            //var landingHeight = $('body').css('height') - $('nav').css('height')
-            //$('#landing').css('height', landingHeight);
+            /*if ($('.form-pair').has('.long-input')) {
+               this.css('width', "100%");
+               console.log(this)
+            }*/
+            $('.form-pair:has(.long-input)').css('width', "100%");
         })
-    </script>
-
-    <script src="particles.js"></script>
-    <script>
-        particlesJS.load('particles-js', 'particlesjs-config.json', function() {
-            console.log('callback - particles.js config loaded');
-        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script>
         var options = {
-            strings: ['SIX FEET APART'],
+            strings: ['Treatment'],
             typeSpeed: 80,
             showCursor: false
         };

@@ -13,10 +13,27 @@ body {
     color: var(--blackish);
 }
 
+p, ul {
+    font-size: 3.5vh;
+}
+
+li {
+    margin: 4vh 0;
+}
+
 a {
     text-decoration: none;
 }
 
+.bold {
+    font-weight: 500;
+}
+
+.smaller {
+    font-size: smaller;
+}
+
+/* Navigation bar */
 nav {
     display: flex;
     width: 100%;
@@ -38,10 +55,6 @@ nav a {
     transition: border-color 0.75s ease;
 }
 
-p {
-    font-size: 3.5vh;
-}
-
 nav a:hover {
     border-color: var(--green);
 }
@@ -60,7 +73,7 @@ nav a:hover {
 }
 
 @media screen and (max-width: 768px) {
-    p {
+    p, ul {
         font-size: 2.5vh;
     }
 
@@ -158,6 +171,7 @@ h1 {
     margin: 5vh 20vw 0 20vw;
 }
 
+/* Coronavirus stats */
 .info-container {
     padding: 2.5rem;
     border-radius: 3px;
@@ -197,6 +211,77 @@ h1 {
     margin-bottom: 5px;
 }
 
-#map {
-    height: 75vh;
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    font-family: var(--body);
+    font-weight: 400;
+    letter-spacing: 0;
+    font-size: 0.9rem;
+    width: 10vw;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-pair {
+    display: inline-block;
+    margin: 2vh 3.5vw;
+}
+
+.text-input {
+    display: block;
+    box-sizing: border-box;
+    line-height: 1.5;
+    padding: 0.35rem 0.6rem;
+    border: 1px solid #DADADA;
+    outline: 0;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    letter-spacing: 0;  
+    transition: all 0.2s ease-in-out;
+}
+
+.text-input:focus {
+    border: 1px solid #80BDFF;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .flex-row {
+        flex-direction: column;
+    }
+
+    .text-input {
+        width: 100%;
+    }
+}
+
+/* SVGs */
+.symptoms-img {
+    position: absolute;
+    left: 5%;
+    height: 35vh;
+    width: auto;
+    z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+    .symptoms-img {
+        display: block;
+        left: -20%;
+        height: 35vh;
+        width: auto;
+    }
 }
