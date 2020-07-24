@@ -128,7 +128,7 @@ nav a:hover {
         display: flex;
         height: 100vh;
         background-color: var(--whiteish);
-        z-index: 2;
+        z-index: 20 ;
     }
 
     .link-toggled {
@@ -325,17 +325,29 @@ label {
     #gallery {
         flex-direction: column;
     }
-
-    #gallery iframe {
-        width: 230 !important;
-        height: 207.5 !important;
-    }
 }
 
 #symptoms-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+}
+
+.testing-procedures h2 {
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+.testing-procedures div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+#testing-image {
+    height: 40vh !important;
+    width: auto !important;
 }
 
 /* Galllery */
@@ -345,3 +357,19 @@ label {
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 768px) {
+    .testing-procedures div {
+        flex-direction: column;
+    }
+
+    #testing-image {
+        height: 30vh !important;
+        width: auto !important;
+    }
+
+    #gallery iframe {
+        width: 230;
+        height: 207.5;
+    }
+}   
